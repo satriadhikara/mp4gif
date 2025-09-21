@@ -1,0 +1,30 @@
+{
+  "name": "mp4gif",
+  "version": "0.1.1",
+  "description": "Convert MP4 to GIF in one command (Bun + ffmpeg)",
+  "module": "index.ts",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "mp4gif": "./cli.ts"
+  },
+  "scripts": {
+    "mp4gif": "bun ./cli.ts"
+  },
+  "keywords": [
+    "mp4",
+    "gif",
+    "ffmpeg",
+    "video",
+    "cli",
+    "bun"
+  ],
+  "license": "MIT",
+  "files": [
+    "cli.ts",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
