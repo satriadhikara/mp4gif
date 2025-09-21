@@ -22,7 +22,8 @@
   "license": "MIT",
   "files": [
     "cli.ts",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "devDependencies": {
     "@types/bun": "latest"
