@@ -30,6 +30,7 @@ jobs:
           registry-url: https://registry.npmjs.org
       - name: Check tag matches package.json version
         run: test "v$(jq -r .version package.json)" = "$GITHUB_REF_NAME"
-      # trusted publishing needs npm >= 11.5.1
+      # trusted publishing and `npm stage` need a recent npm
       - run: npm install -g npm@latest
-      - run: npm publish --access public
+      # staged: approve on npmjs.com (2FA) or `npm stage approve <stage-id>` to release
+      - run: npm stage publish . --access public
