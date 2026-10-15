@@ -1,15 +1,19 @@
 {
   "name": "mp4gif",
-  "version": "0.1.1",
-  "description": "Convert MP4 to GIF in one command (Bun + ffmpeg)",
-  "module": "index.ts",
+  "version": "0.2.0",
+  "description": "Convert MP4 to GIF as a CLI or importable API (Bun + ffmpeg)",
+  "module": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "type": "module",
   "private": false,
   "bin": {
-    "mp4gif": "./cli.ts"
+    "mp4gif": "./src/cli.ts"
   },
   "scripts": {
-    "mp4gif": "bun ./cli.ts"
+    "mp4gif": "bun ./src/cli.ts",
+    "test": "bun test"
   },
   "keywords": [
     "mp4",
@@ -20,8 +24,19 @@
     "bun"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satriadhikara/mp4gif.git"
+  },
+  "homepage": "https://github.com/satriadhikara/mp4gif#readme",
+  "bugs": {
+    "url": "https://github.com/satriadhikara/mp4gif/issues"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
   "files": [
-    "cli.ts",
+    "src/",
     "README.md",
     "LICENSE"
   ],
