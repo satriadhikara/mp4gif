@@ -1,6 +1,6 @@
 # mp4gif
 
-Convert MP4 to GIF in one command (powered by Bun + ffmpeg).
+Convert MP4 to GIF as a CLI or importable API (powered by Bun + ffmpeg).
 
 ## Requirements
 
@@ -23,7 +23,7 @@ bun add -g mp4gif
 bunx mp4gif --help
 ```
 
-## Usage
+## CLI Usage
 
 ```bash
 mp4gif <input.mp4> [output.gif] [options]
@@ -55,6 +55,24 @@ mp4gif ./input.mp4 ./out.gif --start 5 --duration 3
 
 # Overwrite existing output
 mp4gif ./input.mp4 ./out.gif --overwrite
+```
+
+## Programmatic Usage
+
+```ts
+import { convertMp4ToGif } from 'mp4gif';
+
+await convertMp4ToGif(
+  './input.mp4',
+  './output.gif',
+  {
+    fps: 12,
+    width: 480,
+    start: 5,
+    duration: 3,
+    overwrite: true,
+  }
+);
 ```
 
 ## Development
